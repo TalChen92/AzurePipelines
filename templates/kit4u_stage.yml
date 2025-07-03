@@ -1,0 +1,12 @@
+parameters:
+  - name: kit4u_path
+    type: string
+    default: ""
+
+jobs:
+- job: RunKit4U
+  displayName: "Run KIT4U"
+  steps:
+  - script: |
+      echo "Running KIT4U with path: ${{ parameters.kit4u_path }}"
+    displayName: "Execute KIT4U"

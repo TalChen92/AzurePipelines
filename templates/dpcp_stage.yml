@@ -1,0 +1,18 @@
+parameters:
+  - name: imageName
+    type: string
+    default: ""
+  - name: imageTag
+    type: string
+    default: "latest"
+  - name: dockerImageRegistry
+    type: string
+    default: ""
+
+
+jobs:
+- job: BuildAndPushDockerImage
+  displayName: "Build and Push Docker Image"
+  steps:
+  - script: |
+      echo "Building Docker image with name: ${{ parameters.imageName }} and tag: ${{ parameters.imageTag }}"

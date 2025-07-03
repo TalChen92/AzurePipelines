@@ -1,0 +1,13 @@
+parameters:
+  - name: exe_path
+    type: string
+    displayName: "MATLAB Simulation Executable Path"
+    default: ""
+
+jobs:
+- job: RunMatlabSimulation
+  displayName: "Run MATLAB Simulation"
+  steps:
+  - script: |
+      echo "Running MATLAB simulation executable: ${{ parameters.exe_path }}"
+    displayName: "Execute MATLAB Simulation"

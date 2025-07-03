@@ -1,0 +1,40 @@
+parameters:
+  - name: PMDA_CLI_PATH
+    type: string
+    default: ""
+  - name: PMDA_BLUE_ROUTE
+    type: string
+    default: ""
+  - name: PMDA_FREQ
+    type: string
+    default: ""
+  - name: PMDA_LINES
+    type: string
+    default: ""
+
+
+jobs:
+- job: RunPMDA
+  displayName: "Run PMDA Analysis"
+  steps:
+  - script: |
+      echo "Running PMDA CLI from path: ${{ parameters.PMDA_CLI_PATH }}"
+      echo "Blue route: ${{ parameters.PMDA_BLUE_ROUTE }}"
+      echo "Frequency: ${{ parameters.PMDA_FREQ }}"
+      echo "Lines: ${{ parameters.PMDA_LINES }}"
+    displayName: "Execute PMDA CLI"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

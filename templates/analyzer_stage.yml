@@ -1,0 +1,13 @@
+parameters:
+  - name: analyzer_path
+    type: string
+    default: ""
+    displayName: "Path to Analyzer"
+
+jobs:
+- job: RunAnalyzer
+  displayName: "Run Analyzer"
+  steps:
+  - script: |
+      echo "Running Analyzer with path: ${{ parameters.analyzer_path }}"
+    displayName: "Execute Analyzer"
